@@ -1,0 +1,13 @@
+body{
+    background-color:ghostwhite;
+    font-size: large;
+}
+label{
+    color:blueviolet;
+}
+form{
+    text-align: center;
+}
+input{
+    margin-bottom: 35px;
+}
