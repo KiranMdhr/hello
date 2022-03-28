@@ -8,17 +8,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form method="post" action="new.php"> <!--action="<?php $_SERVER['PHP_SELF'];?>"-->
-        <label for="fname">Firstname</label>
-        <input type="text" name="fname" id="lname" placeholder="fname"><br>
+
+    <form method="post" action="<?php $_SERVER['PHP_SELF'];?>">
+    <?php
+    $name="";
+    $nameErr="";
+    $address
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    if(empty($_POST["fname"])){ 
+        $nameErr = "Name is required";
+    }else{
+           $name = $_POST["fname"]; 
+    }
+    if(empty($_POST["lname"])){ 
+        $nameErr = "Name is required";
+    }else{
+           $name = $_POST["lname"]; 
+    }
+    if(empty($_POST["address"])){ 
+        $nameErr = "Name is required";
+    }else{
+           $name = $_POST["lname"]; 
+    }
+    
+}
+?>
+        <label for="fname" >Firstname</label>
+        <input type="text" name="fname" id="fname" placeholder="fname">
+        <span><?php echo $nameErr;?></span><br>
         <label for="lname">Lastname</label>
         <input type="text" name="lname" id="lname" placeholder="lname"><br>
+        <span><?php echo $nameErr;?></span><br>
         <label for="Address">Address</label>
         <input type="text" name="address" id="address" placeholder="address"><br>
         <label for="age">Age</label>
         <input type="number" name="Age" id="Age" placeholder="Age"><br>
         <label for="Religon">Religon</label>
         <select name="Religon"id="Religon">
+            
             <option>Christianity</option>
             <option>Muslim</option>
             <option>Hindu</option>
@@ -27,8 +54,6 @@
         <button>Submit</button>
             
     </form>
-    <!-- <?php
-        echo $_POST['fname'];
-    ?> -->
+
 </body>
 </html>
