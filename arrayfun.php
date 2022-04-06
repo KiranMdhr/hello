@@ -32,7 +32,24 @@ $cars =array(
 
 // ARRAY SLICE
 // temporary array ko remove gardinxa
-print_r($cars);
-echo"<br>";
-print_r(array_slice($cars,2));
+// print_r($cars);
+// echo"<br>";
+// print_r(array_slice($cars,2));
+// ARRAY CHUNK
+ print_r($cars);
+ echo"<br>";
+//  $chunked = array_chunk($cars,2);
+//  print_r($chunked);
+// ARRAY POP
+// $poped = array_pop($cars);
+// print_r($poped);
+
+
+// ARRAY PUSH
+// array_push($cars,"Bently");
+// print_r($cars);
+
+
+// ARRAY KEYS
+print_r(array_keys($cars));
  ?>
